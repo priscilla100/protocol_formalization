@@ -1,0 +1,12 @@
+streamlit
+anthropic
+openai
+google-generativeai
+python-dotenv
+pandas
+sqlalchemy
+pydantic
+PyPDF2
+tiktoken 
+rapidfuzz 
+sentence-transformers

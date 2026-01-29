@@ -1,0 +1,22 @@
+id,rfc,section,text,type,timestamp
+7289b0ad,919,6,never broadcast a datagram on the hardware network it was received on,Safety,2025-12-10T21:21:10.916567
+04f927ef,919,6,"If the datagram is received on the hardware network to which it is addressed, then it should not be forwarded",Safety,2025-12-10T21:21:10.916598
+5fd0f588,919,6,the gateway should consider itself to be a destination of the datagram,Safety,2025-12-10T21:21:10.916606
+3417739a,919,6,"if the datagram is addressed to a hardware network to which the gateway is connected, it should be sent as a (data link layer) broadcast on that network",Safety,2025-12-10T21:21:10.916612
+800d6ae8,919,6,the gateway should consider itself a destination of the datagram,Safety,2025-12-10T21:21:10.916618
+acdb0f9b,919,6,"the gateway should use its normal routing procedure to choose a subsequent gateway, and send the datagram along to it",Safety,2025-12-10T21:21:10.916624
+e90915dd,919,7,"The address 255.255.255.255 denotes a broadcast on a local hardware network, which must not be forwarded",Safety,2025-12-10T21:21:10.916629
+662a0a17,919,4,a host should discard datagrams not meant for it without becoming flustered,Safety,2025-12-10T21:21:10.916634
+a7df2ab4,919,4,The receiving IP layer must be able to recognize this address as well as its own,Safety,2025-12-10T21:21:10.916639
+85708a2b,2920,3.2,MUST respond to commands in the order they are received from the client.,Ordering,2025-12-10T22:06:33.114858
+d2f9cd23,2920,3.2,"SHOULD elect to store responses to grouped RSET, MAIL FROM, SEND FROM, SOML FROM, SAML FROM, and RCPT TO commands in an internal buffer so they can sent as a unit.",Safety,2025-12-10T22:06:33.114912
+acc931f5,2920,3.2,SHOULD issue a positive response to the DATA command if and only if one or more valid RCPT TO addresses have been previously received.,Safety,2025-12-10T22:06:33.114922
+1d46aa10,2920,3.2,"MUST NOT, after issuing a positive response to a DATA command with no valid recipients and subsequently receiving an empty message, send any message whatsoever to anybody.",Safety,2025-12-10T22:06:33.114931
+374cd2c8,2920,3.2,"MUST NOT buffer responses to EHLO, DATA, VRFY, EXPN, TURN, QUIT, and NOOP.",Safety,2025-12-10T22:06:33.114938
+4e8ebe88,2920,3.2,MUST NOT buffer responses to unrecognized commands.,Safety,2025-12-10T22:06:33.114945
+fb3d3aa4,2920,3.2,MUST send all pending responses immediately whenever the local TCP input buffer is emptied.,Timing,2025-12-10T22:06:33.114952
+4574159d,2920,3.2,MUST NOT make assumptions about commands that are yet to be received.,Safety,2025-12-10T22:06:33.114960
+ee9d0046,2920,3.2,MUST NOT flush or otherwise lose the contents of the TCP input buffer under any circumstances whatsoever.,Safety,2025-12-10T22:06:33.114968
+cbdd3bed,2920,3.2,"SHOULD issue response text that indicates, either implicitly or explicitly, what command the response matches.",Safety,2025-12-10T22:06:33.114976
+9a116243,2920,3.1,Client SMTP implementations that employ pipelining MUST check ALL statuses associated with each command in a group.,Safety,2025-12-10T22:06:33.114983
+3c81f89a,2920,3.1,Command statuses MUST be coordinated with responses by counting each separate response and correlating that count with the number of commands.,Safety,2025-12-10T22:06:33.114991

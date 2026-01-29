@@ -1,0 +1,114 @@
+id,property_id,name,type,description,timestamp,approved,approved_by,relevance,model
+0579a2d8,7289b0ad,datagram_received_on_network,event,Datagram is received on a hardware network,2025-12-10T21:21:30.753418,True,User,,
+52657109,7289b0ad,broadcast_datagram_on_network,action,Broadcasting a datagram on a hardware network,2025-12-10T21:21:30.753473,True,User,,
+1e9dccfb,04f927ef,datagram_received_on_addressed_network,condition,Datagram is received on the hardware network to which it is addressed,2025-12-10T21:21:30.753484,True,User,,
+7ba1d2de,04f927ef,forward_datagram,action,Forwarding a datagram,2025-12-10T21:21:30.753494,True,User,,
+42b43033,5fd0f588,gateway_considers_self_destination,state,Gateway considers itself to be a destination of the datagram,2025-12-10T21:21:30.753502,True,User,,
+b53c8aa1,3417739a,datagram_addressed_to_connected_network,condition,Datagram is addressed to a hardware network to which the gateway is connected,2025-12-10T21:21:30.753510,True,User,,
+259ffff0,3417739a,send_as_datalink_broadcast,action,Sending datagram as a data link layer broadcast on the network,2025-12-10T21:21:30.753517,True,User,,
+0a551a3b,800d6ae8,gateway_considers_self_destination,state,Gateway considers itself a destination of the datagram,2025-12-10T21:21:30.753525,True,User,,
+c579b856,acdb0f9b,use_normal_routing_procedure,action,Gateway uses its normal routing procedure to choose a subsequent gateway,2025-12-10T21:21:30.753533,True,User,,
+e976ab23,acdb0f9b,send_datagram_to_next_gateway,action,Sending the datagram to the next gateway,2025-12-10T21:21:30.753540,True,User,,
+3127b53c,e90915dd,address_is_broadcast_address,condition,Address is 255.255.255.255 denoting local hardware network broadcast,2025-12-10T21:21:30.753547,True,User,,
+907e446c,e90915dd,forward_datagram,action,Forwarding a datagram,2025-12-10T21:21:30.753555,True,User,,
+9f5a1ae7,662a0a17,datagram_not_meant_for_host,condition,Datagram is not meant for the host,2025-12-10T21:21:30.753563,True,User,,
+93f6ffae,662a0a17,discard_datagram,action,Host discards datagrams,2025-12-10T21:21:30.753570,True,User,,
+5c8e9343,a7df2ab4,recognize_broadcast_address,action,IP layer recognizes the broadcast address,2025-12-10T21:21:30.753577,True,User,,
+c0960098,a7df2ab4,recognize_own_address,action,IP layer recognizes its own address,2025-12-10T21:21:30.753585,True,User,,
+9af82ab6,85708a2b,command_received_from_client,event,A command is received from the client,2025-12-10T22:08:25.588235,,,high,claude
+ff8a476e,85708a2b,command_queued_for_processing,action,System queues the received command for processing,2025-12-10T22:08:25.588254,,,high,claude
+43e659af,85708a2b,response_generated,action,System generates a response to a command,2025-12-10T22:08:25.588263,,,high,claude
+eb15b21e,85708a2b,response_sent_to_client,action,System sends the response back to the client,2025-12-10T22:08:25.588270,,,high,claude
+f51e4f0c,85708a2b,command_processing_started,event,Processing of a specific command begins,2025-12-10T22:08:25.588276,,,high,claude
+42d1c081,85708a2b,command_processing_completed,event,Processing of a specific command is finished,2025-12-10T22:08:25.588283,,,high,claude
+3934a09f,85708a2b,commands_pending_in_queue,condition,There are commands waiting to be processed in the queue,2025-12-10T22:08:25.588290,,,medium,claude
+f147f9a5,85708a2b,fifo_order_maintained,condition,First-in-first-out order is preserved in command processing,2025-12-10T22:08:25.588296,,,high,claude
+3863ee6d,85708a2b,earlier_command_exists,condition,There exists a command that was received before the current command,2025-12-10T22:08:25.588303,,,high,claude
+86b56679,1d46aa10,server_issues_positive_response_to_data,action,Server issues a positive response to a DATA command,2025-12-10T22:08:46.024393,,,high,claude
+37168d72,1d46aa10,data_command_has_no_valid_recipients,condition,The DATA command contains no valid recipients,2025-12-10T22:08:46.024436,,,high,claude
+5e5d66bb,1d46aa10,server_receives_empty_message,event,Server receives an empty message after the DATA command response,2025-12-10T22:08:46.024446,,,high,claude
+04a676e0,1d46aa10,server_sends_message_to_anyone,action,Server sends any message whatsoever to anybody,2025-12-10T22:08:46.024455,,,high,claude
+5ac86300,1d46aa10,positive_response_issued,state,State indicating a positive response has been issued,2025-12-10T22:08:46.024463,,,medium,claude
+2c75237d,1d46aa10,empty_message_received,state,State indicating an empty message has been received,2025-12-10T22:08:46.024470,,,medium,claude
+71534a63,4e8ebe88,command_received,event,A command is received by the system,2025-12-10T22:09:03.226881,,,high,claude
+df948f83,4e8ebe88,command_is_recognized,condition,The received command is recognized/known by the system,2025-12-10T22:09:03.226937,,,high,claude
+1f1d058d,4e8ebe88,command_is_unrecognized,condition,The received command is not recognized/unknown by the system,2025-12-10T22:09:03.226946,,,high,claude
+00f4aa29,4e8ebe88,response_generated,event,A response is generated for the received command,2025-12-10T22:09:03.226954,,,high,claude
+30c674ed,4e8ebe88,response_buffered,action,System buffers/stores a response instead of sending immediately,2025-12-10T22:09:03.226960,,,high,claude
+447d08bf,4e8ebe88,response_sent_immediately,action,System sends response immediately without buffering,2025-12-10T22:09:03.226967,,,medium,claude
+59f0374f,4e8ebe88,buffer_contains_response,state,The system buffer contains a response waiting to be sent,2025-12-10T22:09:03.226974,,,high,claude
+ba8c9024,fb3d3aa4,local_tcp_input_buffer_emptied,event,The local TCP input buffer becomes empty,2025-12-10T22:09:10.702383,,,high,claude
+00387e9c,fb3d3aa4,pending_responses_exist,condition,There are pending responses waiting to be sent,2025-12-10T22:09:10.702429,,,high,claude
+ec201cdf,fb3d3aa4,send_pending_responses,action,Send all pending responses,2025-12-10T22:09:10.702441,,,high,claude
+ca07da04,fb3d3aa4,responses_sent_immediately,condition,All pending responses are sent without delay,2025-12-10T22:09:10.702450,,,high,claude
+cdc627cc,fb3d3aa4,local_tcp_input_buffer_empty,state,The local TCP input buffer is in an empty state,2025-12-10T22:09:10.702460,,,medium,claude
+2c363cd0,fb3d3aa4,all_pending_responses_sent,state,All pending responses have been successfully sent,2025-12-10T22:09:10.702469,,,medium,claude
+c51e4eae,4574159d,assumption_made_about_future_command,action,System makes an assumption about a command that has not yet been received,2025-12-10T22:09:18.998736,,,high,claude
+33a7815b,4574159d,command_received,event,A command is received by the system,2025-12-10T22:09:18.998773,,,high,claude
+1bbdd39a,4574159d,command_pending_receipt,state,A command exists but has not yet been received by the system,2025-12-10T22:09:18.998783,,,high,claude
+af59684b,4574159d,system_processes_known_commands_only,condition,System only processes commands that have already been received,2025-12-10T22:09:18.998792,,,high,claude
+c9f996b2,4574159d,future_command_predicted,action,System predicts or anticipates what future commands will be,2025-12-10T22:09:18.998800,,,medium,claude
+0a0dc5f1,4574159d,decision_based_on_unreceived_command,action,System makes a decision based on a command that hasn't been received yet,2025-12-10T22:09:18.998834,,,high,claude
+7bac8625,ee9d0046,tcp_input_buffer_flushed,action,TCP input buffer is flushed or cleared,2025-12-10T22:09:26.368988,,,high,claude
+05cc448b,ee9d0046,tcp_input_buffer_contents_lost,event,Contents of TCP input buffer are lost or discarded,2025-12-10T22:09:26.369039,,,high,claude
+85aad2f5,ee9d0046,tcp_input_buffer_has_data,state,TCP input buffer contains data,2025-12-10T22:09:26.369051,,,high,claude
+41ad01aa,ee9d0046,tcp_input_buffer_empty,state,TCP input buffer is empty,2025-12-10T22:09:26.369061,,,medium,claude
+384db700,ee9d0046,tcp_connection_active,state,TCP connection is established and active,2025-12-10T22:09:26.369070,,,medium,claude
+a03eb4f2,ee9d0046,tcp_connection_reset,event,TCP connection is reset,2025-12-10T22:09:26.369079,,,medium,claude
+ded6e5f2,ee9d0046,tcp_connection_closed,event,TCP connection is closed,2025-12-10T22:09:26.369087,,,medium,claude
+4e38d4ce,ee9d0046,system_error_occurs,event,System error or exception occurs,2025-12-10T22:09:26.369097,,,medium,claude
+20c2ae4a,ee9d0046,memory_pressure_high,condition,System is under high memory pressure,2025-12-10T22:09:26.369106,,,medium,claude
+52ea06af,ee9d0046,tcp_stack_shutdown,event,TCP stack is being shut down,2025-12-10T22:09:26.369130,,,medium,claude
+105f8c2e,cbdd3bed,system_receives_command,event,System receives a command from user or client,2025-12-10T22:09:33.371856,,,high,claude
+63d635ca,cbdd3bed,system_issues_response,action,System generates and sends a response,2025-12-10T22:09:33.371886,,,high,claude
+d573b1b3,cbdd3bed,response_contains_text,state,The response includes textual content,2025-12-10T22:09:33.371895,,,high,claude
+ccbfa5a1,cbdd3bed,response_explicitly_indicates_matched_command,state,Response text directly states which command it corresponds to,2025-12-10T22:09:33.371903,,,high,claude
+9d8db360,cbdd3bed,response_implicitly_indicates_matched_command,state,Response text indirectly shows which command it corresponds to through context or content,2025-12-10T22:09:33.371910,,,high,claude
+b9023e76,cbdd3bed,command_response_mapping_exists,condition,There is a clear relationship between the received command and the issued response,2025-12-10T22:09:33.371917,,,high,claude
+7c583865,9a116243,client_uses_pipelining,condition,SMTP client implementation employs pipelining,2025-12-10T22:09:40.743117,,,high,claude
+07dcaf7c,9a116243,commands_grouped_in_pipeline,state,Multiple SMTP commands are grouped together in a pipeline,2025-12-10T22:09:40.743162,,,high,claude
+1b0ff21c,9a116243,status_received_for_command,event,A status response is received for a specific command,2025-12-10T22:09:40.743173,,,high,claude
+8ac00b2a,9a116243,client_checks_command_status,action,Client checks the status associated with a command,2025-12-10T22:09:40.743182,,,high,claude
+db2e61fe,9a116243,all_statuses_checked,condition,All status responses for commands in the group have been checked,2025-12-10T22:09:40.743191,,,high,claude
+577cba21,9a116243,command_group_complete,state,All commands in a pipelined group have been sent and responses received,2025-12-10T22:09:40.743199,,,medium,claude
+34122e44,3c81f89a,command_issued,event,A command is issued to the system,2025-12-10T22:09:47.769228,,,high,claude
+8d35a22d,3c81f89a,response_received,event,A response is received from the system,2025-12-10T22:09:47.769252,,,high,claude
+9cecc018,3c81f89a,command_count_incremented,action,The count of issued commands is incremented,2025-12-10T22:09:47.769256,,,high,claude
+ced7d3f9,3c81f89a,response_count_incremented,action,The count of received responses is incremented,2025-12-10T22:09:47.769259,,,high,claude
+6b2320b5,3c81f89a,command_count_equals_response_count,condition,The number of commands equals the number of responses,2025-12-10T22:09:47.769262,,,high,claude
+dffc167a,3c81f89a,command_response_correlation_performed,action,Correlation between command count and response count is performed,2025-12-10T22:09:47.769266,,,high,claude
+d1cdb21d,3c81f89a,command_status_coordinated,state,Command statuses are properly coordinated with responses,2025-12-10T22:09:47.769268,,,high,claude
+157c2612,3c81f89a,counting_mechanism_active,state,The counting mechanism for commands and responses is active,2025-12-10T22:09:47.769271,,,medium,claude
+434d4030,374cd2c8,client_sends_ehlo,event,Client sends EHLO command,2025-12-10T22:08:53.704730,,,high,claude
+649fe8cd,374cd2c8,client_sends_data,event,Client sends DATA command,2025-12-10T22:08:53.704774,,,high,claude
+63eed207,374cd2c8,client_sends_vrfy,event,Client sends VRFY command,2025-12-10T22:08:53.704785,,,high,claude
+584e3451,374cd2c8,client_sends_expn,event,Client sends EXPN command,2025-12-10T22:08:53.704794,,,high,claude
+e663b16e,374cd2c8,client_sends_turn,event,Client sends TURN command,2025-12-10T22:08:53.704803,,,high,claude
+bc93855c,374cd2c8,client_sends_quit,event,Client sends QUIT command,2025-12-10T22:08:53.704812,,,high,claude
+0ab8adda,374cd2c8,client_sends_noop,event,Client sends NOOP command,2025-12-10T22:08:53.704822,,,high,claude
+86389239,374cd2c8,server_buffers_ehlo_response,action,Server buffers response to EHLO command,2025-12-10T22:08:53.704830,,,high,claude
+c51ea768,374cd2c8,server_buffers_data_response,action,Server buffers response to DATA command,2025-12-10T22:08:53.704839,,,high,claude
+ab938141,374cd2c8,server_buffers_vrfy_response,action,Server buffers response to VRFY command,2025-12-10T22:08:53.704848,,,high,claude
+778ce192,374cd2c8,server_buffers_expn_response,action,Server buffers response to EXPN command,2025-12-10T22:08:53.704858,,,high,claude
+e5239e80,374cd2c8,server_buffers_turn_response,action,Server buffers response to TURN command,2025-12-10T22:08:53.704888,,,high,claude
+5e5365ad,374cd2c8,server_buffers_quit_response,action,Server buffers response to QUIT command,2025-12-10T22:08:53.704911,,,high,claude
+db1b1ec1,374cd2c8,server_buffers_noop_response,action,Server buffers response to NOOP command,2025-12-10T22:08:53.704922,,,high,claude
+9fbb8da8,374cd2c8,response_is_buffered,state,A response is currently being buffered by the server,2025-12-10T22:08:53.704932,,,high,claude
+3d7c641b,d2f9cd23,rset_command_received,event,RSET command is received by the server,2025-12-10T22:08:33.737577,,,high,claude
+05b919d5,d2f9cd23,mail_from_command_received,event,MAIL FROM command is received by the server,2025-12-10T22:08:33.737622,,,high,claude
+b68f424a,d2f9cd23,send_from_command_received,event,SEND FROM command is received by the server,2025-12-10T22:08:33.737632,,,high,claude
+fb20ce40,d2f9cd23,soml_from_command_received,event,SOML FROM command is received by the server,2025-12-10T22:08:33.737642,,,high,claude
+d16d996e,d2f9cd23,saml_from_command_received,event,SAML FROM command is received by the server,2025-12-10T22:08:33.737651,,,high,claude
+c6b5f447,d2f9cd23,rcpt_to_command_received,event,RCPT TO command is received by the server,2025-12-10T22:08:33.737659,,,high,claude
+e1823558,d2f9cd23,commands_are_grouped,condition,Multiple commands form a logical group for processing,2025-12-10T22:08:33.737674,,,high,claude
+5289ece0,d2f9cd23,response_generated,action,Server generates a response to a command,2025-12-10T22:08:33.737735,,,high,claude
+b3eee3e4,d2f9cd23,response_stored_in_buffer,action,Server stores response in internal buffer instead of sending immediately,2025-12-10T22:08:33.737755,,,high,claude
+29842600,d2f9cd23,internal_buffer_exists,state,Server has an internal buffer for storing responses,2025-12-10T22:08:33.737766,,,high,claude
+1368c1d3,d2f9cd23,responses_sent_as_unit,action,Server sends all buffered responses together as a single unit,2025-12-10T22:08:33.737775,,,high,claude
+29dbe48f,d2f9cd23,grouped_commands_complete,condition,All commands in the current group have been processed,2025-12-10T22:08:33.737784,,,medium,claude
+2324d228,acc931f5,data_command_received,event,Server receives a DATA command from client,2025-12-10T22:08:39.880933,,,high,claude
+9a7d4dd0,acc931f5,positive_response_issued,action,Server issues a positive response to the DATA command,2025-12-10T22:08:39.880978,,,high,claude
+3e5a7a02,acc931f5,valid_rcpt_to_received,condition,One or more valid RCPT TO addresses have been previously received,2025-12-10T22:08:39.880989,,,high,claude
+307434bf,acc931f5,rcpt_to_command_processed,event,Server has processed an RCPT TO command,2025-12-10T22:08:39.880999,,,medium,claude
+94f85334,acc931f5,rcpt_to_address_valid,condition,The RCPT TO address is valid,2025-12-10T22:08:39.881008,,,medium,claude
+0f11af4c,acc931f5,negative_response_issued,action,Server issues a negative response to the DATA command,2025-12-10T22:08:39.881018,,,high,claude
